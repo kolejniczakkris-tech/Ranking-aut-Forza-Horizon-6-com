@@ -1,0 +1,183 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Segoe UI", Arial, sans-serif;
+	color: rgb(31, 41, 55);
+	min-height: 100vh;
+    background: #3F5EFB;
+background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);
+	/* TODO: dodaj gradient liniowy jako tło strony */
+}
+
+header {
+	padding: 24px 32px;
+	color: white;
+    background: rgba(0, 0, 0, 0.4);
+	/* TODO: dodaj półprzezroczyste tło i cień tekstu dla nagłówka */
+}
+
+nav ul {
+	list-style: none;
+	display: flex;
+	gap: 16px;
+	margin-top: 12px;
+}
+
+nav a {
+	color: white;
+	text-decoration: none;
+}
+
+#intro {
+	padding: 32px;
+	color: white;
+	text-align: center;
+}
+
+.category-bar {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 12px;
+	padding: 0 32px 24px;
+}
+
+.category-btn {
+	padding: 10px 16px;
+	border: none;
+	border-radius: 999px;
+	background: rgba(255, 255, 255, 0.9);
+	color: rgb(31, 41, 55);
+	font-weight: 600;
+	cursor: pointer;
+	transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.category-btn:hover,
+.category-btn.active {
+	background: #fc466b;
+	color: white;
+	transform: translateY(-2px);
+}
+
+/* TODO: dodaj style siatki .ranking-grid z flex-wrap, gap i wyśrodkowaniem kart */
+
+/* TODO: dodaj style pojedynczej karty .phone-card oraz obrazka i odznaki z oceną */
+
+footer {
+	padding: 24px;
+	text-align: center;
+	color: white;
+	background: rgba(0, 0, 0, 0.4);
+}
+.ranking-grid {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 24px;
+	padding: 32px;
+	justify-content: center;
+}
+
+.phone-card {
+	background: radial-gradient(circle at top, #ffffff, #e5e7eb);
+	border-radius: 16px;
+	padding: 20px;
+	width: 280px;
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+	text-align: center;
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.phone-card:hover {
+	transform: translateY(-8px);
+	box-shadow: 0 14px 30px rgba(0, 0, 0, 0.35);
+}
+
+.phone-card img {
+	width: 100%;
+	border-radius: 12px;
+	margin-bottom: 12px;
+}
+
+.phone-card .score {
+	display: inline-block;
+	margin-top: 12px;
+	padding: 6px 12px;
+	background: rgb(34, 197, 94);
+	color: white;
+	border-radius: 999px;
+}
+
+/* Modal styles */
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 1000;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.8);
+	animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+
+.modal-content {
+	background-color: white;
+	margin: auto;
+	padding: 40px;
+	border-radius: 16px;
+	max-width: 600px;
+	width: 90%;
+	max-height: 90vh;
+	overflow-y: auto;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+.modal-content img {
+	width: 100%;
+	border-radius: 12px;
+	margin-bottom: 20px;
+}
+
+.modal-content h2 {
+	color: rgb(31, 41, 55);
+	margin-bottom: 12px;
+}
+
+.modal-content p {
+	color: rgb(75, 85, 99);
+	line-height: 1.6;
+	font-size: 16px;
+}
+
+.close {
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	font-size: 32px;
+	font-weight: bold;
+	color: rgb(31, 41, 55);
+	cursor: pointer;
+	transition: color 0.2s ease;
+}
+
+.close:hover {
+	color: #fc466b;
+}
+
+.phone-card {
+	cursor: pointer;
+}

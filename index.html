@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ranking aut w Forza Horizon 6</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Ranking aut w Forza Horizon 6</h1>
+        <nav>
+            <ul>
+                <li><a href="#ranking">Ranking</a></li>
+                <li><a href="#intro">Intro</a></li>
+            </ul>
+        </nav>
+    </header>
+	<!-- TODO: dodaj nagłówek strony z tytułem i nawigacją -->
+
+	<main>
+        <section id="intro">
+            <h2>Witaj w rankingu aut z Forza Horizon6!</h2>
+            <p>Przegląd najlepszych i najpopularniejszych modeli aut z analizą ich zalet i wad.</p>
+        </section>
+
+        <div class="category-bar" role="toolbar" aria-label="Kategorie aut">
+            <button class="category-btn active" data-category="all">Wszystkie</button>
+            <button class="category-btn" data-category="drag">Drag</button>
+            <button class="category-btn" data-category="szutry">Szutry</button>
+            <button class="category-btn" data-category="offroad">Offroad</button>
+            <button class="category-btn" data-category="drift">Drift</button>
+            <button class="category-btn" data-category="szosa">Szosa</button>
+        </div>
+
+        <section id="ranking" class="ranking-grid">
+            <article class="phone-card" data-category="szosa">
+                <img src="images/aston martin valjkyrie pro.jpg" alt="Aston Martin Valkyrie Amr Pro">
+                <h3>Aston Martin Valkyrie Amr Pro</h3>
+                <p>To auto ma niesamowitą przyczepność i adekwatną prędkość jak na Aston Martin przystało.</p>
+            </article>
+                        <article class="phone-card" data-category="drift">
+                <img src="images/supra mk4.jpg" alt="Toyota Supra Mk4">
+                <h3>Toyota Supra Mk4</h3>
+                <p>Ta Toyota jest legendarnym driftowozem i ma wiele opcji tuningu i ulepszeń silnika.</p>
+            </article>
+                        <article class="phone-card" data-category="drag">
+                <img src="images/nissan fe.jpg" alt="Nissan gtr-12 FE (R35)">
+                <h3>Nissan GTR-12 FE (R35)</h3>
+                <p>To jest jedno z najszybszych aut w całej grze z silnikiem o mocy 3000 KM ale niestety to jest auto do wyścgów typu drag.</p>
+            </article>
+                        <article class="phone-card" data-category="szutry">
+                <img src="images/boss fh6.jpg" alt="Ford Mustang Boss 302">
+                <h3>Ford Mustang Boss 302</h3>
+                <p>Ten muscle car oferuje zakup silnika który natychmiast dodaje 1000 KM.</p>
+            </article>
+                        <article class="phone-card" data-category="drag">
+                <img src="images/miata fe.jpg" alt="Mazda MX-5 Miata">
+                <h3>Mazda MX-5 Miata</h3>
+                <p>Da się ją kupić z aftermarketu i jest to auto dragsterowe ale jest możliwe zrobienie jej do wszzystkich wyścigów.</p>
+            </article>
+                        <article class="phone-card" data-category="offroad">
+                <img src="images/brz fe.webp" alt="Subaru Brz FE">
+                <h3>Subaru Brz FE</h3>
+                <p>Ulepszona wersja pod jazdę terenową.</p>
+            </article>
+
+		<!-- TODO: dodaj sekcję intro z nagłówkiem i krótkim opisem rankingu -->
+
+		<!-- TODO: dodaj sekcję z kartami telefonów w kontenerze klasy ranking-grid -->
+	</main>
+
+	<footer>
+		<p>Ranking aut w Forza Horizon 6</p>
+	</footer>
+
+	<!-- Modal do wyświetlenia pełnego widoku karty -->
+	<div id="cardModal" class="modal">
+		<div class="modal-content">
+			<span class="close">&times;</span>
+			<img id="modalImg" src="" alt="">
+			<h2 id="modalTitle"></h2>
+			<p id="modalDescription"></p>
+		</div>
+	</div>
+
+	<script src="script.js"></script>
+</body>
+</html>
